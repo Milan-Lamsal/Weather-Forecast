@@ -2,7 +2,12 @@
 
 A beautiful, responsive weather application that provides real-time weather information with a modern glass-morphic UI design.
 
-![Weather App Demo](assests/demo-screenshot.png)
+## 📸 App Preview
+
+<div align="center">
+  <img src="assests/pic1.png" alt="Weather App Light Mode" width="400">
+  <img src="assests/pic2.png" alt="Weather App Dark Mode" width="400">
+</div>
 
 ## ✨ Features
 
@@ -18,7 +23,9 @@ A beautiful, responsive weather application that provides real-time weather info
 
 ## 🚀 Live Demo
 
-[View Live Demo](your-live-demo-url) - Coming soon!
+Try out the Weather App: [View Live Demo](https://milan-lamsal.github.io/Weather-Forecast/) 
+
+> Note: You'll need to set up your own OpenWeatherMap API key to use the app. See the [Installation](#-installation) section for setup instructions.
 
 ## 🛠️ Technologies Used
 
