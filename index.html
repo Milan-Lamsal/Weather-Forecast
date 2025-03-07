@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00feba">
+    <meta name="description" content="Weather forecast application with real-time updates">
     <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="dark-mode-toggle">
+            <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <div class="slider round"></div>
+        </label>
+        <em>Dark Mode</em>
+    </div>
 
     <div class="card">
         <div class="search">
-           <input type="text" placeholder="enter the city name" spellcheck="false">
-           <button><img src="assests/search.png"></button>
+           <input type="text" placeholder="Enter city name" spellcheck="false" aria-label="Enter city name">
+           <button aria-label="Search city"><img src="assests/search.png" alt="Search icon"></button>
         </div>
 
         <div class="error">
@@ -19,14 +29,13 @@
         </div>
 
         <div class="Weather">
-            <img src="assests/rain.png" class="weather-icon">
+            <img src="assests/rain.png" class="weather-icon" alt="Weather condition icon">
             <h1 class="temp">22°C</h1>
             <h2 class="city">New York</h2>
 
             <div class="details">
-
                 <div class="col">
-                    <img src="assests/humidity.png">
+                    <img src="assests/humidity.png" alt="Humidity icon">
                     <div>
                         <p class="humidity">50%</p>
                         <p>Humidity</p>
@@ -34,24 +43,40 @@
                </div>
 
                 <div class="col">
-                    <img src="assests/wind.png">
-
+                    <img src="assests/wind.png" alt="Wind speed icon">
                     <div>
                         <p class="wind">15km/h</p>
-                        <p> Wind Speed </p>
-
+                        <p>Wind Speed</p>
                     </div>
                 </div>
+            </div>
             
+            <div class="toggles-wrapper">
+                <div class="unit-toggle-wrapper">
+                    <div class="unit-toggle" role="radiogroup" aria-label="Temperature unit selection">
+                        <input type="radio" id="celsius" name="temp-unit" value="celsius" checked>
+                        <label for="celsius">°C</label>
+                        <input type="radio" id="fahrenheit" name="temp-unit" value="fahrenheit">
+                        <label for="fahrenheit">°F</label>
+                        <div class="toggle-slider"></div>
+                    </div>
+                </div>
+
+                <div class="unit-toggle-wrapper">
+                    <div class="unit-toggle" role="radiogroup" aria-label="Wind speed unit selection">
+                        <input type="radio" id="kph" name="wind-unit" value="kph" checked>
+                        <label for="kph">KPH</label>
+                        <input type="radio" id="mph" name="wind-unit" value="mph">
+                        <label for="mph">MPH</label>
+                        <div class="toggle-slider"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="unit-toggle">
-            <button class="unit-btn active" data-unit="celsius">°C</button>
-            <button class="unit-btn" data-unit="fahrenheit">°F</button>
-          </div>
-
-
     </div>
 
-<script type="text/javascript" src="script.js"></script>
+    <!-- Load configuration before main script -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
