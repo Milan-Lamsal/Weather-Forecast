@@ -1,0 +1,111 @@
+* {
+    margin: 0;                      /* Remove default margin for all elements */
+    padding: 0;                     /* Remove default padding for all elements */
+    font-family: 'Poppins', sans-serif; /* Set the font to Poppins for all elements */
+    box-sizing: border-box;         /* Include padding and border in the element's total width and height */
+}
+
+body {
+    background-color: #222;      /* Set the background color of the page to dark grey */
+}
+
+.card {
+    width: 90%;                     /* Set width to 90% of the parent container */
+    max-width: 470px;               /* Limit the width to 470px maximum */
+    background: linear-gradient(135deg, #00feba, #5b548a); /* Diagonal gradient from light teal to purple */
+    color: #fff;                    /* Set text color to white */
+    margin: 100px auto 0;           /* 100px top margin, center horizontally */
+    border-radius: 20px;            /* Round the corners with 20px radius */
+    padding: 40px 35px;             /* Add padding inside the card (40px top/bottom, 35px left/right) */
+    text-align: center;             /* Center the text inside the card */
+}
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color:#555;
+    padding: 10px 25px;
+    height: 50px;
+    border-radius: 30px;
+    flex:1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.search button img{
+    width: 16px;
+}
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    margin-bottom: 500;
+}
+.weather h2{
+    font-size: 45px;
+    margin-bottom: 400px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top:50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+.humidity, .wind{
+    font-size: 28px;
+    margin-top:-6px;
+}
+.Weather{
+    display: none;
+}
+.error{
+    text-align: left;
+    color: red;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display:none;
+}
+/* Additional Features  */
+
+.search button:hover { transform: scale(1.05); }
+.search button:active { transform: scale(0.95); }
+
+/*  Adjust font sizes for mobile: */
+@media (max-width: 480px) {
+    .search input { font-size: 16px; }
+    .temp { font-size: 60px; }
+    .city { font-size: 36px; }
+  }
+
+  /* Smooth Transitions: */
+
+ 
+
+
