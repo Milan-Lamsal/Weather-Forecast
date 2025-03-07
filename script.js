@@ -1,10 +1,10 @@
-const apiUrl ="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-const apikey = config.apiKey;
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const apikey = (typeof config !== 'undefined' && config.apiKey) ? config.apiKey : 'YOUR_API_KEY_HERE';
 
 // Validate API key
 if (!apikey || apikey === 'YOUR_API_KEY_HERE') {
     console.error('Please set up your OpenWeatherMap API key in config.js');
-    document.querySelector(".error").textContent = "API key not configured. Please set up your API key.";
+    document.querySelector(".error").textContent = "API key not configured. Please check the README for setup instructions.";
     document.querySelector(".error").style.display = "block";
 }
 
